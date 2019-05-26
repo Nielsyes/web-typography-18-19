@@ -6,7 +6,8 @@ function onYouTubeIframeAPIReady() {
 		height: 400,
 		videoId: 'vrP-_T-h9YM',
 		playerVars: {
-			color: 'white'
+			color: 'white',
+			//start: 
 			//autoplay: '1'
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
 		},
@@ -53,7 +54,7 @@ function updateTimerDisplay(){
 		sTimes(i,sounds[i],t);
 		i++;
 	}
-
+// Change 136.1 to the length of your own video in seconds
 	if ( t < 136.1) {
 		setTimeout(() => {
 			updateTimerDisplay();
