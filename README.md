@@ -13,7 +13,13 @@ En dat gaan jullie doen.
 - Je kan de kennis over vormgeving die je hebt geleerd tijdens de minor technisch toepassen met behulp van CSS
 - Je kan verborgen nuance uit een audiotrack overtuigend vertalen naar visuele typografische beelden
 - Je kan je typografische keuzes onderbouwen.
-- Je hebt het experiment niet geschuwd
+- Je hebt de exclusive design principles gebruikt.
+
+## Oplevering
+
+Je levert een werkende versie op, gemaakt met HTML, CSS en JavaScript. Deze staat op Github. In een duidelijke readme documenteer en onderbouw je je ontwerpkeuzes. Je developmentgeschiedenis is terug te vinden op GitHub.
+
+Je levert ook een *screen recording* met audio op van je fragment. Dit is een video van de definitieve versie, gemaakt van jouw browserscherm.
 
 ## Typografische restricties
 
@@ -56,6 +62,12 @@ Er verschijnen ook classes op de body op momenten dat er geluiden worden afgespe
 
 ## Een eigen fragment
 
-Je kan er ook voor kiezen om een eigen, beter fragment te gebruiken. Je kan dan de nodige HTML en JavaScript genereren door gebruik te maken van [caption generator](https://cmda-minor-vid.github.io/web-typography-18-19/generator/) (in Google Chrome). 
+Je kan er ook voor kiezen om een eigen, *beter* fragment te gebruiken. Je moet dan wel heel goed onderbouwen waarom het fragment beter is voor deze specifieke opdracht. Vragen die je hierbij kunnen helpen:
+
+- Welke informatie zit er in de audio die echt niet zichtbaar is?
+- Welke rol speelt de audio in het fragment?
+- Werkt de scene nog zonder geluid?
+
+Je kan dan de nodige HTML en JavaScript genereren door gebruik te maken van [caption generator](https://cmda-minor-vid.github.io/web-typography-18-19/generator/) (in Google Chrome). 
 
 Als je de closed captions wil bewerken dan kan je een tool zoals [Amber Script](https://www.amberscript.com/en) gebruiken. Daar kan je exporteren als `.srt`, en die kan je weer door de generator halen.
