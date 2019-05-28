@@ -27,4 +27,4 @@ function addAndRemoveClass(soundClass, element, timeOut){
 	}, 10)
 }
 
-addAndRemoveClass('sound1', 'crt-overlay', 1000);
+addAndRemoveClass('sound1', 'crt-overlay', 2000);
