@@ -3,7 +3,7 @@
 sounds = [
 	0,
 	9,
-	12,
+	11,
 	15,
 	16.5,
 	24,
@@ -13,3 +13,18 @@ sounds = [
 	34,
 	86
 ];
+
+function addAndRemoveClass(soundClass, element, timeOut){
+	let alreadySet;
+	setInterval(function(){
+		if (document.body.classList.contains(soundClass) && alreadySet != true) {
+			document.body.classList.add(element);
+			setTimeout(function(){
+				document.body.classList.remove(element);
+				alreadySet = true;
+			}, timeOut)
+		}
+	}, 10)
+}
+
+addAndRemoveClass('sound1', 'crt-overlay', 1000);

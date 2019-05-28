@@ -1,4 +1,43 @@
 /* **********************************************
+basic styling custimisations
+********************************************** */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+}
+
+.video-placeholder_wrapper {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.video-placeholder_wrapper_inner iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#closed-captions {
+	position: absolute;
+	width: 100%;
+	color: #FFF;
+}
+
+/* **********************************************
 Basic mechanics
 Hide all paragraphs by default
 Show them when they receive the class 'on'
@@ -18,7 +57,20 @@ Feel free to adjust the defaults to your needs.
 	opacity: 0;
 }
 .voice1 {
+	font-size: 70px;
+	font-family: "Brenner Slab Regular";
 	font-style: italic;
+	right: 100px;
+	top: 100px;
+	color: #e8e8e8
+}
+
+.voice2 {
+	font-size: 60px;
+	font-family: "Brenner Sans Condensed Regular";
+	color: #9b9b9b;
+	left: 200px;
+	top: 200px;
 }
 
 /* **********************************************
@@ -29,68 +81,332 @@ The first paragraph, with extended timing for
 	spoken.
 You probably want to change the styling.
 ********************************************** */
+
 .p0 span {
 	opacity: 0;
-	font-family: brenner;
+
 }
 .p0.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	font-weight: 200;
 }
 .p0.on span:nth-of-type(2) {
 	opacity: 1;
 	transition: 0s .4s;
-	margin-right: -.25em;
-	font-weight: 400;
 }
 .p0.on span:nth-of-type(3) {
 	opacity: 1;
 	transition: 0s .5s;
-	margin-right: -.25em;
-	font-weight: 600;
 }
 .p0.on span:nth-of-type(4) {
 	opacity: 1;
 	transition: 0s .7s;
-	margin-right: -.25em;
-	font-weight: 800;
 }
 .p0.on span:nth-of-type(5) {
 	opacity: 1;
 	transition: 0s 1.1s;
-	margin-right: -.25em;
-	font-family: "brenner sans";
 }
 .p0.on span:nth-of-type(6) {
 	opacity: 1;
 	transition: 0s 1.4s;
-	margin-right: -.25em;
-	font-family: "brenner display";
 }
 .p0.on span:nth-of-type(7) {
 	opacity: 1;
 	transition: 0s 1.7s;
-	margin-right: -.25em;
-	font-family: "brenner script";
 }
 .p0.on span:nth-of-type(8) {
 	opacity: 1;
 	transition: 0s 2s;
-	font-family: "brenner script";
 }
 .p0.on span:nth-of-type(9) {
 	opacity: 1;
 	transition: 0s 3s;
-	font-family: "brenner Sans condensed";
+	font-family: "Brenner Slab Light";
+	font-style: normal;
+	position: absolute;
+	top: 100px;
+	right: 600px;
+	animation: slideIn 0.05s 3s;
 }
 .p0.on span:nth-of-type(10) {
 	opacity: 1;
 	transition: 0s 3.2s;
-	font-family: "brenner mono";
+	font-family: "Brenner Slab light";
+	font-style: normal;
+	position: absolute;
+	top: 100px;
+	right: 390px;
+	animation: slideIn 0.05s 3.2s;
 }
 .p0.on span:nth-of-type(11) {
 	opacity: 1;
 	transition: 0s 3.7s;
-	font-family: "brenner slab";
+	font-family: "Brenner Slab Bold";
+	font-style: normal;
+	position: absolute;
+	top: 200px;
+	right: 600px;
+	animation: slideIn 0.05s 3.7s;
+}
+
+/* **********************************************
+The second paragraph
+********************************************** */
+
+.p1.on {
+	animation: slightZoom 1s forwards;
+}
+
+.p1 span {
+	opacity: 0;
+}
+
+.p1.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+}
+.p1.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .4s;
+
+}
+
+/* **********************************************
+The third paragraph
+********************************************** */
+
+.p2 span {
+	opacity: 0;
+}
+
+.p2.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+}
+
+.p2.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .4s;
+}
+
+.p2.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .5s;
+}
+
+/* **********************************************
+The fourth paragraph
+********************************************** */
+
+.p3 span {
+	opacity: 0;
+}
+
+.p3.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+}
+
+.p3.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .2s;
+	animation: slightZoomInOut .5s .2s forwards;
+	display: inline-block;
+}
+
+.p3.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .7s;
+}
+
+.p3.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	animation: slightZoomInOut .5s 1.2s forwards;
+	display: inline-block;
+}
+
+.p3.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.5s;
+
+}
+
+.p3.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.7s;
+}
+
+
+/* **********************************************
+Sound classes on body
+********************************************** */
+
+.sound0 iframe {
+	animation: ZoomOut 1.5s forwards;
+}
+
+.sound0 {
+	animation: grayPulse 1.7s 1.25s 7, zoomTremble 0.3s 50
+}
+
+.sound1 {
+	animation: textShadow 1.6s infinite;
+}
+
+.crt-overlay::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	z-index: 2;
+	background-size: 100% 2px, 3px 100%;
+}
+
+.crt-overlay:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(18, 16, 16, 1);
+	opacity: 0;
+	z-index: 2;
+	animation: flicker 0.15s infinite;
+}
+
+/* **********************************************
+animations
+********************************************** */
+
+@keyframes flicker {
+	0% {
+	  opacity: 0.27861;
+	}
+	5% {
+	  opacity: 0.34769;
+	}
+	10% {
+	  opacity: 0.23604;
+	}
+	15% {
+	  opacity: 0.90626;
+	}
+	20% {
+	  opacity: 0.18128;
+	}
+	25% {
+	  opacity: 0.83891;
+	}
+	30% {
+	  opacity: 0.65583;
+	}
+	35% {
+	  opacity: 0.67807;
+	}
+	40% {
+	  opacity: 0.26559;
+	}
+	45% {
+	  opacity: 0.84693;
+	}
+	50% {
+	  opacity: 0.96019;
+	}
+	55% {
+	  opacity: 0.08594;
+	}
+	60% {
+	  opacity: 0.20313;
+	}
+	65% {
+	  opacity: 0.71988;
+	}
+	70% {
+	  opacity: 0.53455;
+	}
+	75% {
+	  opacity: 0.37288;
+	}
+	80% {
+	  opacity: 0.71428;
+	}
+	85% {
+	  opacity: 0.70419;
+	}
+	90% {
+	  opacity: 0.7003;
+	}
+	95% {
+	  opacity: 0.36108;
+	}
+	100% {
+	  opacity: 0.24387;
+	}
+  }
+
+@keyframes ZoomOut {
+	50% {
+		transform: scale(0.7);
+	}
+	100% {
+		transform: scale(0.9);
+	}
+}
+
+@keyframes zoomTremble {
+	from {
+		transform: scale(0.98);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes grayPulse {
+	0% {
+		background-color: #000;
+	}
+	5% {
+		background-color: #9b9b9b;
+	}
+	100% {
+		background-color: #000;
+	}
+}
+
+@keyframes slideIn{
+	from {
+		transform: translateX(-200px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes slightZoom {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.5);
+	}
+}
+
+@keyframes slightZoomInOut {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1)
+	}
 }

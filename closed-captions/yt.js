@@ -2,13 +2,17 @@ var player;
 
 function onYouTubeIframeAPIReady() {
 	player = new YT.Player('video-placeholder', {
-		width: 600,
-		height: 400,
+		width: 0,
+		height: 0,
 		videoId: 'vrP-_T-h9YM',
 		playerVars: {
 			color: 'white',
+			// controls: 0,
+			rel: 0,
+			autoplay: 1,
+			modestbranding: 1,
+			fs: 0,
 			//start: 
-			//autoplay: '1'
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
 		},
 		events: {
