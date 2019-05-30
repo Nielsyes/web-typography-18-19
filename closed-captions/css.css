@@ -73,6 +73,21 @@ Feel free to adjust the defaults to your needs.
 	top: 200px;
 }
 
+.voice3 {
+	font-size: 80px;
+	font-family: "Brenner Display Stencil Black ";
+	left: 200px;
+	top: 200px;
+}
+
+.voice2-2 {
+	font-size: 60px;
+	font-family: "Brenner Sans Condensed Regular";
+	color: #9b9b9b;
+	right: 100px;
+	top: 150px;
+}
+
 /* **********************************************
 The first paragraph, with extended timing for 
 	all siblings. Basically what it does is that
@@ -237,6 +252,198 @@ The fourth paragraph
 	transition: 0s 1.7s;
 }
 
+/* **********************************************
+The fifth paragraph
+********************************************** */
+
+.p4 span {
+	opacity: 0;
+}
+
+.p4.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+}
+
+.p4.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .2s;
+}
+
+.p4.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .4s;
+}
+
+.p4.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s .6s;
+	font-family: 'Brenner Sans Condensed Medium';
+	animation: slightZoomInOut .5s .6s forwards;
+	display: inline-block;
+}
+
+.p4.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.1s;
+
+}
+
+.p4.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.6s;
+}
+
+.p4.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 1.8s;
+	font-family: 'Brenner Sans Condensed Medium';
+	animation: slightZoomInOut .5s 1.8s forwards;
+	display: inline-block;
+}
+
+/* **********************************************
+The sixth paragraph
+********************************************** */
+
+
+.p5 span {
+	opacity: 0;
+}
+
+.p5.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+}
+
+.p5.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .2s;
+}
+
+.p5.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .4s;
+	font-family: 'Brenner Sans Condensed Medium';
+	animation: slightZoomInOut .5s .4s forwards;
+	display: inline-block;
+}
+
+.p5.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 1.2s;
+}
+
+.p5.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.8s;
+}
+
+.p5.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 2s;
+}
+
+.p5.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 2.2s;
+}
+
+/* **********************************************
+The seventh paragraph
+********************************************** */
+
+.p6 span {
+	opacity: 0;
+}
+
+.p6.on {
+	animation: slideIn 0.1s;
+}
+
+.p6.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	color: #e24a28;
+}
+
+.p6.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .2s;
+	color: #e24a28;
+}
+
+.p6.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .4s;
+}
+
+/* **********************************************
+The eigth paragraph
+********************************************** */
+
+.p7 span {
+	opacity: 0;
+}
+
+.p7.on {
+	animation: shrinkHorizontal 5s;
+}
+
+.p7.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+}
+
+.p7.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .2s;
+}
+
+.p7.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .6s;
+}
+
+.p7.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 1s;
+}
+
+.p7.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.2s;
+}
+
+.p7.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.4s;
+}
+
+.p7.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 2.5s;
+}
+
+.p7.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 2.7s;
+}
+
+.p7.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 2.9s;
+}
+
+.p7.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 3.1s;
+}
+
+.p7.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 3.3s;
+}
 
 /* **********************************************
 Sound classes on body
@@ -247,12 +454,41 @@ Sound classes on body
 }
 
 .sound0 {
-	animation: grayPulse 1.7s 1.25s 7, zoomTremble 0.3s 50
+	animation: grayPulse 1.7s 1.25s 6, zoomTremble 0.3s 50
 }
 
 .sound1 {
-	animation: textShadow 1.6s infinite;
+	/*handled by js*/
 }
+
+.sound3 {
+	animation: redBlurPulse 1s;
+}
+
+.sound4 iframe {
+	animation: rotate 2s;
+}
+
+.sound5 {
+	animation: beepAnnoyance 0.1s infinite;
+}
+
+.sound6 iframe {
+	animation: quickJumpRight 1s;
+}
+
+.sound7 iframe {
+	animation: rotate 2s;
+}
+
+/*animation set on wrapper because 2 of the same animation in a row on the same element did not seem to work*/
+.sound8 .video-placeholder_wrapper {
+	animation: rotate 2s;
+}
+
+/* **********************************************
+Overlays
+********************************************** */
 
 .crt-overlay::before {
 	content: " ";
@@ -263,7 +499,7 @@ Sound classes on body
 	bottom: 0;
 	right: 0;
 	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-	z-index: 2;
+	z-index: 1;
 	background-size: 100% 2px, 3px 100%;
 }
 
@@ -281,9 +517,37 @@ Sound classes on body
 	animation: flicker 0.15s infinite;
 }
 
+.alarm-gradient::before {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	/* background-image: radial-gradient(circle closest-side at 50% 50%, rgba(222, 75, 218, .75), rgba(222, 75, 218, 0) 100%);   */
+	/* background-image: radial-gradient(circle closest-side at 50% 50%, rgba(255, 0, 0, 1), rgba(135, 0, 0, 0) 100%);   */
+	background-image: radial-gradient(circle closest-side at 50% 50%, rgba(255, 0, 0, 1) 20%, rgba(135, 0, 0, 0) 100%);
+	width: 100%;
+	height: 100%;
+	transition: opacity 1s;
+	animation: alarmGradient 2s infinite;
+}
+
+.gradient-overlay::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.2;
+	background: linear-gradient(179deg, #bcdd00, #9b9b9b);
+	background-size: 400% 400%;
+	animation: gradientOverlay 15s ease infinite;
+}
+
+
 /* **********************************************
 animations
 ********************************************** */
+
+/*misschien animaties specifieker maken*/
 
 @keyframes flicker {
 	0% {
@@ -381,6 +645,19 @@ animations
 	}
 }
 
+@keyframes redBlurPulse {
+	0% {
+		background-color: #000;
+	}
+	50% {
+		background-color: #870000;
+		filter: blur(20px);
+	}
+	100% {
+		background-color: #000;
+	}
+}
+
 @keyframes slideIn{
 	from {
 		transform: translateX(-200px);
@@ -408,5 +685,98 @@ animations
 	}
 	100% {
 		transform: scale(1)
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg)
+	}
+	60%{
+		transform: rotate(60deg)
+	}
+	100% {
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes alarmGradient {
+	0% {
+		transform: rotate(0deg) scale(1,1);
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		transform: rotate(-180deg) scale(1,1.5);
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(-360deg) scale(1,1);
+		opacity: 0;
+	}
+}
+
+@keyframes gradientOverlay { 
+	0%{
+		background-position:50% 0%;
+	}
+	50%{
+		background-position:50% 100%;
+	}
+	95% {
+		opacity: 0.2;
+	}
+	100%{
+		background-position:50% 0%;
+		opacity: 0;
+	}
+}
+
+@keyframes quickJumpRight {
+	0% {
+		transform: translate(0px);
+	}
+	10% {
+		transform: translate(50%);
+	}
+	100% {
+		transform: translate(0px);
+	}
+}
+
+@keyframes shrinkHorizontal{
+	from {
+		transform: scaleY(1);
+	}
+	to {
+		transform: scaleY(0.3);
+	}
+}
+
+@keyframes beepAnnoyance {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	16.6% {
+		transform: translateY(-2px);
+	}
+	33.3% {
+		transform: translate(2px, 0px);
+	}
+	49.9% {
+		transform: translate(0px, 2px);
+	}
+	66.5% {
+		transform: translate(-2px, 0px);
+	}
+	83.1% {
+		transform: translate(0px, -2px);
+	}
+	100% {
+		transform: translate(0px, 0px);
 	}
 }

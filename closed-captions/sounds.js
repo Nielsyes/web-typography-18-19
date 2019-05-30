@@ -3,11 +3,12 @@
 sounds = [
 	0,
 	9,
-	11,
-	15,
-	16.5,
-	24,
-	25.8,
+	11.45,
+	12,
+	15.3,
+	19,
+	23.2,
+	24.5,
 	31,
 	32,
 	34,
@@ -28,3 +29,7 @@ function addAndRemoveClass(soundClass, element, timeOut){
 }
 
 addAndRemoveClass('sound1', 'crt-overlay', 2000);
+addAndRemoveClass('sound3', 'gradient-overlay', 15000);
+addAndRemoveClass('sound4', 'alarm-gradient', 2000);
+addAndRemoveClass('sound7', 'alarm-gradient', 2000);
+addAndRemoveClass('sound8', 'alarm-gradient', 2000);

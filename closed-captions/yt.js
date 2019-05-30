@@ -9,7 +9,7 @@ function onYouTubeIframeAPIReady() {
 			color: 'white',
 			// controls: 0,
 			rel: 0,
-			autoplay: 1,
+			autoplay: 0,
 			modestbranding: 1,
 			fs: 0,
 			//start: 
