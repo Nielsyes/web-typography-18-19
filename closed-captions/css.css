@@ -470,20 +470,36 @@ Sound classes on body
 }
 
 .sound5 {
-	animation: beepAnnoyance 0.1s infinite;
+	animation: beepAnnoyance 0.1s 30;
 }
 
-.sound6 iframe {
-	animation: quickJumpRight 1s;
+.sound6 {
+	animation: beepAnnoyanceLouder 0.1s 70;
 }
 
 .sound7 iframe {
+	animation: quickJumpRight 1s;
+}
+
+.sound8 iframe {
 	animation: rotate 2s;
 }
 
+.sound9 {
+	animation: beepAnnoyance 0.1s 30;
+}
+
 /*animation set on wrapper because 2 of the same animation in a row on the same element did not seem to work*/
-.sound8 .video-placeholder_wrapper {
+.sound10 .video-placeholder_wrapper {
 	animation: rotate 2s;
+}
+
+.sound11 {
+	animation: beepAnnoyanceLouder 0.1s infinite;
+}
+
+.sound11 iframe {
+	animation: slowZoomOut 20s;
 }
 
 /* **********************************************
@@ -542,12 +558,122 @@ Overlays
 	animation: gradientOverlay 15s ease infinite;
 }
 
+/* **********************************************
+seperate elements
+********************************************** */
+#bars, #bars-big {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 2;
+    justify-content: center;
+	align-items: center;
+	opacity: 0;
+}
 
+#bars {
+	animation: opacityFadeBuildUp 9.2s;
+}
+
+.bar {
+    background: #FFF;
+    height: 100px;
+    width: 4px;
+	margin: 0px 5px;
+	animation: voice 0s infinite alternate;
+}
+
+.bar:nth-child(1)  { left: 0px; animation-duration: 0.2s; }
+.bar:nth-child(2)  { left: 10px; animation-duration: 0.3s; }
+.bar:nth-child(3)  { left: 20px; animation-duration: 0.5s; }
+.bar:nth-child(4)  { left: 30px; animation-duration: 0.7s; }
+.bar:nth-child(5)  { left: 40px; animation-duration: 0.5s; }
+.bar:nth-child(6)  { left: 50px; animation-duration: 0.3s; }
+.bar:nth-child(7)  { left: 60px; animation-duration: 0.2s; }
+.bar:nth-child(8)  { left: 70px; animation-duration: 0.3s; }
+.bar:nth-child(9)  { left: 80px; animation-duration: 0.5s; }
+.bar:nth-child(10) { left: 90px; animation-duration: 0.7s; }
+.bar:nth-child(11) { left: 100px; animation-duration: 0.5s; }
+.bar:nth-child(12) { left: 110px; animation-duration: 0.3s; }
+.bar:nth-child(13) { left: 120px; animation-duration: 0.2s; }
+.bar:nth-child(14) { left: 130px; animation-duration: 0.3s; }
+.bar:nth-child(15) { left: 140px; animation-duration: 0.5s; }
+
+#bars-big {
+	animation: opacityFade 9s;
+}
+
+.bar-big {
+    background: #FFF;
+    height: 200px;
+    width: 8px;
+	margin: 0px 5px;
+	animation: voice 0s infinite alternate;
+}
+
+.bar-big:nth-child(1)  { left: 0px; animation-duration: 0.2s; }
+.bar-big:nth-child(2)  { left: 20px; animation-duration: 0.3s; }
+.bar-big:nth-child(3)  { left: 40px; animation-duration: 0.5s; }
+.bar-big:nth-child(4)  { left: 60px; animation-duration: 0.7s; }
+.bar-big:nth-child(5)  { left: 80px; animation-duration: 0.5s; }
+.bar-big:nth-child(6)  { left: 100px; animation-duration: 0.3s; }
+.bar-big:nth-child(7)  { left: 120px; animation-duration: 0.2s; }
+.bar-big:nth-child(8)  { left: 140px; animation-duration: 0.3s; }
+.bar-big:nth-child(9)  { left: 160px; animation-duration: 0.5s; }
+.bar-big:nth-child(10) { left: 180px; animation-duration: 0.7s; }
+.bar-big:nth-child(11) { left: 200px; animation-duration: 0.5s; }
+.bar-big:nth-child(12) { left: 220px; animation-duration: 0.3s; }
+.bar-big:nth-child(13) { left: 240px; animation-duration: 0.2s; }
+.bar-big:nth-child(14) { left: 260px; animation-duration: 0.3s; }
+.bar-big:nth-child(15) { left: 280px; animation-duration: 0.5s; }
 /* **********************************************
 animations
 ********************************************** */
 
 /*misschien animaties specifieker maken*/
+
+@keyframes opacityFade {
+	5% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	80% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes opacityFadeBuildUp {
+	5% {
+		opacity: 0.1;
+	}
+	55% {
+		opacity: 0.1;
+	}
+	57% {
+		opacity: 0.4;
+	}
+	95% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes voice {
+	from {
+		height: 20px;
+	}
+	to {
+		height: 100px;
+	}
+}
 
 @keyframes flicker {
 	0% {
@@ -620,6 +746,15 @@ animations
 		transform: scale(0.7);
 	}
 	100% {
+		transform: scale(0.9);
+	}
+}
+
+@keyframes slowZoomOut {
+	from {
+		transform: scale(1);
+	}
+	to {
 		transform: scale(0.9);
 	}
 }
@@ -758,6 +893,30 @@ animations
 }
 
 @keyframes beepAnnoyance {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	16.6% {
+		transform: translateY(-1px);
+	}
+	33.3% {
+		transform: translate(1px, 0px);
+	}
+	49.9% {
+		transform: translate(0px, 1px);
+	}
+	66.5% {
+		transform: translate(-1px, 0px);
+	}
+	83.1% {
+		transform: translate(0px, -1px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes beepAnnoyanceLouder {
 	0% {
 		transform: translate(0px, 0px);
 	}
