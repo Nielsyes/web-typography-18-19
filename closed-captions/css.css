@@ -495,11 +495,11 @@ Sound classes on body
 }
 
 .sound11 {
-	animation: beepAnnoyanceLouder 0.1s infinite;
+	animation: beepAnnoyanceLouder 0.1s 270, beepAnnoyanceLoudest 0.1s 27s 150;
 }
 
 .sound11 iframe {
-	animation: slowZoomOut 20s;
+	animation: slowZoomOut 42s forwards;
 }
 
 /* **********************************************
@@ -567,7 +567,7 @@ seperate elements
 	height: 100%;
 	display: none;
 	z-index: 2;
-    justify-content: center;
+  justify-content: center;
 	align-items: center;
 	opacity: 0;
 }
@@ -577,9 +577,9 @@ seperate elements
 }
 
 .bar {
-    background: #FFF;
-    height: 100px;
-    width: 4px;
+  background: #FFF;
+  height: 100px;
+  width: 4px;
 	margin: 0px 5px;
 	animation: voice 0s infinite alternate;
 }
@@ -605,9 +605,9 @@ seperate elements
 }
 
 .bar-big {
-    background: #FFF;
-    height: 200px;
-    width: 8px;
+  background: #FFF;
+  height: 200px;
+	width: 8px;
 	margin: 0px 5px;
 	animation: voice 0s infinite alternate;
 }
@@ -627,6 +627,13 @@ seperate elements
 .bar-big:nth-child(13) { left: 240px; animation-duration: 0.2s; }
 .bar-big:nth-child(14) { left: 260px; animation-duration: 0.3s; }
 .bar-big:nth-child(15) { left: 280px; animation-duration: 0.5s; }
+
+#particles-js{
+	position: absolute;
+  width: 100%;
+	height: 100%;
+	opacity: 0;
+}
 /* **********************************************
 animations
 ********************************************** */
@@ -755,7 +762,7 @@ animations
 		transform: scale(1);
 	}
 	to {
-		transform: scale(0.9);
+		transform: scale(0.6);
 	}
 }
 
@@ -934,6 +941,30 @@ animations
 	}
 	83.1% {
 		transform: translate(0px, -2px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes beepAnnoyanceLoudest {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	16.6% {
+		transform: translateY(-4px);
+	}
+	33.3% {
+		transform: translate(4px, 0px);
+	}
+	49.9% {
+		transform: translate(0px, 4px);
+	}
+	66.5% {
+		transform: translate(-4px, 0px);
+	}
+	83.1% {
+		transform: translate(0px, -4px);
 	}
 	100% {
 		transform: translate(0px, 0px);

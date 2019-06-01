@@ -44,6 +44,16 @@ function addAndRemoveElement(soundClass, elementId, timeOut){
 	}, 10)
 }
 
+function setParticles(){
+	let particlesElement = document.getElementById('particles-js');
+	setTimeout(function() {
+		particlesElement.style.display = 'none';
+		particlesElement.style.opacity = '1';
+	}, 100)
+}
+
+setParticles();
+
 addAndRemoveClass('sound1', 'crt-overlay', 2000);
 addAndRemoveClass('sound3', 'gradient-overlay', 15000);
 addAndRemoveClass('sound4', 'alarm-gradient', 2000);
@@ -52,3 +62,6 @@ addAndRemoveClass('sound10', 'alarm-gradient', 2000);
 
 addAndRemoveElement('sound4', 'bars', 9200);
 addAndRemoveElement('sound8', 'bars-big', 9000);
+addAndRemoveElement('sound11', 'particles-js', 42000);
+
+
